@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #202938;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(700px, 92%);
+  margin: 48px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+
+header {
+  margin-bottom: 28px;
+}
+
+header p,
+.empty {
+  color: #667085;
+}
+
+.add-form,
+.edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-form input,
+.edit-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #3157d5;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #e9edf5;
+  color: #344054;
+}
+
+.danger {
+  background: #b42318;
+}
+
+.error {
+  color: #b42318;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-list {
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.task > span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.task .edit-form {
+  flex: 1;
+  min-width: 0;
+}
+
+.done {
+  color: #667085;
+  text-decoration: line-through;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 18px auto;
+    padding: 18px;
+  }
+
+  .task {
+    flex-wrap: wrap;
+  }
+
+  .task .edit-form {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+}
